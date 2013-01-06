@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	<scenes id= "test_project" start_scene ="scene.xml">
+		<scene id = "scene0" file = "scene.xml"/>	
+		<scene id = "scene1" file = "scene1.xml"/>
+		<scene id = "scene2" file = "scene2.xml"/>
+		<scene id = "scene3" file = "scene3.xml"/>
+	</scenes>
+</data>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	<actions>
+		<group id = "null_event">
+			<event event = "[NULL][NULL][NULL]">
+				<action action = "[ui][NULL][NULL]" condition = "NULL"/>
+			</event>
+		</group>
+		<group id = "atv_event">
+		<!--	<event event = "[ui][ime_switch][on]">
+				<action action = "[ui][realize][widget][ime_py]" condition = "NULL"/>
+			</event>	
+			<event event = "[ui][ime_switch][off]">
+				<action action = "[ui][destroy][widget][ime_py]" condition = "NULL"/>
+			</event>		-->				
+			<event event = "[ui][key_press][{PL}{K_UP}{OR}{K_DOWN}{OR}{K_L}]">
+				<action action = "[ui][value_add][NULL]" condition = "{[event_para][K_UP]}"/>
+				<action action = "[ui][value_dec][NULL]" condition = "{[event_para][K_DOWN]}"/>
+				<action action = "[ui][destroy][widget][tv_bar]" condition = "{[event_para][K_S]}{AND}{[widget_exsist][tv_bar]}"/>
+				<action action = "[ui][destroy][widget][tv_setting_menu]" condition = "{[event_para][K_S]}{AND}{[widget_exsist][tv_setting_menu]}"/>
+				<action action = "[ui][destroy][widget][tv_source_menu]" condition = "{[event_para][K_L]}{AND}{[widget_exsist][tv_source_menu]}"/>
+				<action action = "[ui][realize][widget][tv_setting_menu]" condition = "{[event_para][K_L]}"/>
+				<action action = "[ui][realize][widget][tv_bar]" condition = "{[event_para][K_L]}"/>
+			</event>	
+			<event event = "[ui][key_press][{PL}{K_RIGHT}{OR}{K_LEFT}]">
+				<action action = "[ui][uiopt][widget][tv_bar][value_add]" condition = "{[event_para][K_RIGHT]}{AND}{[widget_exsist][tv_bar]}"/>
+				<action action = "[ui][uiopt][widget][tv_bar][value_dec]" condition = "{[event_para][K_LEFT]}{AND}{[widget_exsist][tv_bar]}"/>
+				<action action = "[ui][uiopt][widget][tv_bar][export]" condition = "{[widget_exsist][tv_bar]}"/>
+				<action action = "[app][set][volume][(WIDGET_VALUE)(tv_bar)][NULL]" condition = "{[widget_exsist][tv_bar]}{AND}{[widget_value][(tv_setting_menu)(0)]}"/>	
+				<action action = "[app][set][brightness][(WIDGET_VALUE)(tv_bar)][NULL]" condition = "{[widget_exsist][tv_bar]}{AND}{[widget_value][(tv_setting_menu)(1)]}"/>	
+				<action action = "[app][set][contrast][(WIDGET_VALUE)(tv_bar)][NULL]" condition = "{[widget_exsist][tv_bar]}{AND}{[widget_value][(tv_setting_menu)(2)]}"/>	
+				<action action = "[app][set][hue][(WIDGET_VALUE)(tv_bar)][NULL]" condition = "{[widget_exsist][tv_bar]}{AND}{[widget_value][(tv_setting_menu)(3)]}"/>	
+				<action action = "[app][set][staturation][(WIDGET_VALUE)(tv_bar)][NULL]" condition = "{[widget_exsist][tv_bar]}{AND}{[widget_value][(tv_setting_menu)(4)]}"/>	
+				<action action = "[app][set][sharpness][(WIDGET_VALUE)(tv_bar)][NULL]" condition = "{[widget_exsist][tv_bar]}{AND}{[widget_value][(tv_setting_menu)(5)]}"/>	
+			</event>
+			<event event = "[ui][mouse_wheel_up][ANY]">
+				<action action = "[ui][value_dec][NULL]" condition = "{[cursor_in_widget]}"/>
+			</event>	
+			<event event = "[ui][mouse_wheel_down][ANY]">
+				<action action = "[ui][value_add][NULL]" condition = "{[cursor_in_widget]}"/>
+			</event>	
+			<event event = "[ui][key_press][ANY]">
+				<action action = "[ui][uiopt][widget][atv_timer][reset]" condition = "{[widget_exsist][atv_timer]}"/>
+			</event>	
+			<event event = "[ui][atv_timer][timeout]">
+				<action action = "[ui][destroy][widget][tv_source_menu]" condition = "{[widget_exsist][tv_source_menu]}"/>
+				<action action = "[ui][destroy][widget][tv_setting_menu]" condition = "{[widget_exsist][tv_setting_menu]}"/>
+				<action action = "[ui][destroy][widget][tv_bar]" condition = "{[widget_exsist][tv_bar]}"/>
+			</event>		
+		</group>	
+		<group id = "atv_menu_event">
+			<event event = "[when][value_change][after]">
+				<action action = "[app][set][source][(WIDGET_VALUE)(tv_source_menu)][NULL]" condition = "{[widget_id][tv_source_menu]}"/>	
+				<action action = "[ui][update][widget][test_image][WIDGET_VALUE]" condition = "{[widget_id][tv_setting_menu]}"/>
+				<action action = "[ui][reload][widget][tv_bar][volume]" condition = "{[widget_id][tv_setting_menu]}{AND}{[select][0]}"/>	
+				<action action = "[ui][reload][widget][tv_bar][brightness]" condition = "{[widget_id][tv_setting_menu]}{AND}{[select][1]}"/>	
+				<action action = "[ui][reload][widget][tv_bar][contrast]" condition = "{[widget_id][tv_setting_menu]}{AND}{[select][2]}"/>	
+				<action action = "[ui][reload][widget][tv_bar][hue]" condition = "{[widget_id][tv_setting_menu]}{AND}{[select][3]}"/>	
+				<action action = "[ui][reload][widget][tv_bar][saturation]" condition = "{[widget_id][tv_setting_menu]}{AND}{[select][4]}"/>	
+				<action action = "[ui][reload][widget][tv_bar][sharpness]" condition = "{[widget_id][tv_setting_menu]}{AND}{[select][5]}"/>
+			</event>		
+			<!-- <event event = "[ime][keyin][ANY]">
+				<action action = "[ui][keyin][ANY]" condition = "NULL"/>
+			</event> -->
+			<event event = "[ui][key_press][ANY]">
+				<action action = "[ui][softkey][ANY]" condition = "NULL"/>
+			</event>
+		</group>			
+	</actions>
+</data>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data id = "scene0"  widget_file = "widget.xml" action_file = "action.xml" style_file = "style.xml" start_window = "window_tv" theme = "theme.xml" action = "null_event" >
+
+ 
+  <window id = "window_tv"  action = "atv_event" realize = "true" >
+
+		<widget id = "tv_bg" widget = "movie_item1" layer = "1" left = "0" top = "0" action = "null_event" activity="false" theme = "NULL" realize = "true"/>
+
+	<!--
+<widget id = "desktop_weather" widget = "weather" layer = "1" left = "0.1" top = "0.05" action = "null_event" activity= "false" theme = "NULL" realize = "true"/>
+
+
+<widget id = "menu" widget = "menu" layer = "1" left = "0.3" top = "0.3" action = "atv_menu_event" activity="true" theme = "test_theme1" realize = "true" />
+
+		<widget id = "ime_py" widget = "busy" layer = "1" left = "0.0" top = "0.0" action = "null_event" activity="false" theme = "NULL" realize = "true" />	
+
+		<widget id = "desktop_clock" widget = "clock" layer = "1" left = "0.45" top = "0.05" action = "null_event" activity= "false" theme = "test_theme1" realize = "true"/>
+		
+	
+			
+		<widget id = "desktop_finance" widget = "finance" layer = "1" left = "0.1" top = "0.55" action = "null_event" activity= "false" theme = "NULL" realize = "true"/>
+		
+		<widget id = "desktop_news" widget = "news" layer = "1" left = "0.1" top = "0.65" action = "null_event" activity= "false" theme = "NULL" realize = "true"/>
+		
+		<widget id = "menu" widget = "menu" layer = "1" left = "0" top = "0.65" action = "atv_menu_event" activity="true" theme = "NULL" realize = "true" />
+		<widget id = "pplayer" widget = "pplayer1" layer = "1" left = "0." top = "0" action = "atv_menu_event" activity="false" theme = "test_theme1" realize = "true" />					
+		!-->
+	</window>
+ 	
+
+</data>
